@@ -21,7 +21,7 @@ public class NotExEuler implements IgetSeries {
         y.add(0.1);
         result.add(0,0.1);
         for(double x = h; x < 1 + h; x+=h){
-            y.add(f(x, y.get((int)(x/h) - 1)));
+            y.add(f(x, y.getLast()));
             result.add(x, y.getLast());
         }
         return result;
