@@ -22,7 +22,7 @@ public class Euler implements IgetSeries {
         y.add(0.1);
         result.add(0,0.1);
         for(double x = h; x< 1 + h; x+=h){
-            y.add(y.getLast() + h * f(x, y.getLast()));
+            y.add(y.getLast() + h * f(x - h, y.getLast()));
             result.add(x, y.getLast());
         }
         return result;
